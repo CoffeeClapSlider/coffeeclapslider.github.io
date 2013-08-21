@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CoffeeClapSlider - Demo #1</title>
+    <link href="css/kube.min.css" type="text/css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #333;
+        }
+        p, h3 {
+            color: #fefefe;
+        }
+        #CoffeeClapSlider {
+            margin: 0 auto;
+        }
+        .btnCoffeeClapSlider {
+            border: none;
+            width: 20px;
+            background-color: rgba(255,255,255,0.2);
+            height: 300px;
+            position: absolute;
+            cursor: pointer;
+        }
+        .btnCoffeeClapSlider:hover{
+            background-color: rgba(255,255,255,0.4);
+        }
+        .btnCoffeeClapSlider:active{
+            background-color: rgba(255,255,255,0.5);
+        }
+        [name="prev"] {
+            margin-left: 0!important;
+        }
+        [name="next"] {
+            margin-left: 480px!important;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="app/CoffeeClapSlider.js"></script>
+    <script>
+        $(window).load( function() {
+            $( "#CoffeeClapSlider").CoffeeClapSlider({
+              "btnNext" : $('[name="next"]'),
+              "btnPrev" : $('[name="prev"]')
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="units-container">
+
+    <header class="units-row units-padding">
+        <div class="unit-40">
+            <h1 class="color-orange">CoffeeClapSlider</h1>
+        </div>
+        <div class="unit-10"></div>
+        <div class="unit-50">
+            <nav class="nav-g">
+                <ul>
+                    <li><a href="index.html" class="big" title="Home jQuery CoffeeClapSlider">Home</a></li>
+                    <li><span>Demo #1</span></li>
+                    <li><a href="demo1.html" class="big" title="Demo jQuery CoffeeClapSlider №2">Demo #2</a></li>
+                    <li><a href="demo1.html" class="big" title="Demo jQuery CoffeeClapSlider №3">Demo #3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <hr class="highlight"/>
+
+    <div class="units-row units-padding">
+        <div class="unit-100">
+            <h2 class="color-blue">Simple Example CoffeeClapSlider width navigation button.</h2>
+            <nav class="nav-g">
+                <ul>
+                    <li>
+                        <a href="#javascript" class="color-green bold">#JavaScript code</a>
+                    </li>
+                    <li>
+                        <a href="#html" class="color-orange bold">#HTML code</a>
+                    </li>
+                    <li>
+                        <a href="#css" class="color-red bold">#CSS code</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="CoffeeClapSlider">
+                <button class="btnCoffeeClapSlider" name="prev"></button>
+                <button class="btnCoffeeClapSlider" name="next"></button>
+                <ul>
+                    <li><img src="images/1.jpg" /></li>
+                    <li><img src="images/2.jpg" /></li>
+                    <li><img src="images/3.jpg" /></li>
+                    <li><img src="images/4.jpg" /></li>
+                    <li><img src="images/5.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="units-row units-padding">
+        <div class="unit-100">
+        <a name="javascript"></a>
+        <h3>JavaScript:</h3>
+<pre class="highlighted-code" style="font: normal 12px 'Courier New', 'Nimbus Mono L', monospace; background-color: #272822;color: #ddd;max-height: 300px;overflow: auto;">$(window).load( <b><span style="color:#f92672">function</span></b>() {
+    $( <span style="color:#a6e22e">"#CoffeeClapSlider"</span>).CoffeeClapSlider({
+      <span style="color:#a6e22e">"btnNext"</span> : $(<span style="color:#a6e22e">'[name="next"]'</span>),
+      <span style="color:#a6e22e">"btnPrev"</span> : $(<span style="color:#a6e22e">'[name="prev"]'</span>)
+    });
+});</pre>
+        </div>
+    </div>
+
+    <div class="units-row units-padding">
+        <div class="unit-100">
+        <a name="html"></a>
+        <h3>HTML:</h3>
+<pre class="highlighted-code" style="font: normal 12px 'Courier New', 'Nimbus Mono L', monospace; background-color: #272822;color: #ddd;max-height: 300px;overflow: auto;"><span style="color:#f92672">&lt;<b><span style="color:#f92672">div</span></b> <span style="color:#bf79db">id</span>=<span style="color:#a6e22e">"CoffeeClapSlider"</span>&gt;</span>
+    <span style="color:#f92672">&lt;<b><span style="color:#f92672">button</span></b> <span style="color:#bf79db">class</span>=<span style="color:#a6e22e">"btnCoffeeClapSlider"</span> <span style="color:#bf79db">name</span>=<span style="color:#a6e22e">"prev"</span>&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">button</span></b>&gt;</span>
+    <span style="color:#f92672">&lt;<b><span style="color:#f92672">button</span></b> <span style="color:#bf79db">class</span>=<span style="color:#a6e22e">"btnCoffeeClapSlider"</span> <span style="color:#bf79db">name</span>=<span style="color:#a6e22e">"next"</span>&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">button</span></b>&gt;</span>
+    <span style="color:#f92672">&lt;<b><span style="color:#f92672">ul</span></b>&gt;</span>
+        <span style="color:#f92672">&lt;<b><span style="color:#f92672">li</span></b>&gt;</span><span style="color:#f92672">&lt;<b><span style="color:#f92672">img</span></b> <span style="color:#bf79db">src</span>=<span style="color:#a6e22e">"images/1.jpg"</span> /&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">li</span></b>&gt;</span>
+        <span style="color:#f92672">&lt;<b><span style="color:#f92672">li</span></b>&gt;</span><span style="color:#f92672">&lt;<b><span style="color:#f92672">img</span></b> <span style="color:#bf79db">src</span>=<span style="color:#a6e22e">"images/2.jpg"</span> /&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">li</span></b>&gt;</span>
+        <span style="color:#f92672">&lt;<b><span style="color:#f92672">li</span></b>&gt;</span><span style="color:#f92672">&lt;<b><span style="color:#f92672">img</span></b> <span style="color:#bf79db">src</span>=<span style="color:#a6e22e">"images/3.jpg"</span> /&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">li</span></b>&gt;</span>
+        <span style="color:#f92672">&lt;<b><span style="color:#f92672">li</span></b>&gt;</span><span style="color:#f92672">&lt;<b><span style="color:#f92672">img</span></b> <span style="color:#bf79db">src</span>=<span style="color:#a6e22e">"images/4.jpg"</span> /&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">li</span></b>&gt;</span>
+        <span style="color:#f92672">&lt;<b><span style="color:#f92672">li</span></b>&gt;</span><span style="color:#f92672">&lt;<b><span style="color:#f92672">img</span></b> <span style="color:#bf79db">src</span>=<span style="color:#a6e22e">"images/5.jpg"</span> /&gt;</span><span style="color:#f92672">&lt;/<b><span style="color:#f92672">li</span></b>&gt;</span>
+    <span style="color:#f92672">&lt;/<b><span style="color:#f92672">ul</span></b>&gt;</span>
+<span style="color:#f92672">&lt;/<b><span style="color:#f92672">div</span></b>&gt;</span></pre>
+        </div>
+    </div>
+
+    <div class="units-row units-padding">
+        <div class="unit-100">
+        <a name="css"></a>
+        <h3>CSS:</h3>
+<pre class="highlighted-code" style="font: normal 12px Verdana, Tahoma, 'Liberation Sans', sans-serif; background-color: #272822;color: #ddd;max-height: 300px;overflow: auto;"><span style="color:#ddd">.btnCoffeeClapSlider</span> <span style="color:#ddd">{
+    <span style="color:#ddd"><span style="color:#bf79db">border</span>:<span style="color:#008080"> none</span>;</span>
+    <span style="color:#ddd"><span style="color:#bf79db">width</span>:<span style="color:#008080"> <span style="color:#008080">20</span>px</span>;</span>
+    <span style="color:#ddd"><span style="color:#bf79db">background-color</span>:<span style="color:#008080"> <span style="color:#008080">rgba(<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">0.2</span>)</span></span>;</span>
+    <span style="color:#ddd"><span style="color:#bf79db">height</span>:<span style="color:#008080"> <span style="color:#008080">300</span>px</span>;</span>
+    <span style="color:#ddd"><span style="color:#bf79db">position</span>:<span style="color:#008080"> absolute</span>;</span>
+    <span style="color:#ddd"><span style="color:#bf79db">cursor</span>:<span style="color:#008080"> pointer</span>;</span>
+<span style="color:#ddd">}</span></span>
+<span style="color:#ddd">.btnCoffeeClapSlider</span><span style="color:#a6e22e">:hover</span><span style="color:#ddd">{
+    <span style="color:#ddd"><span style="color:#bf79db">background-color</span>:<span style="color:#008080"> <span style="color:#008080">rgba(<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">0.4</span>)</span></span>;</span>
+<span style="color:#ddd">}</span></span>
+<span style="color:#ddd">.btnCoffeeClapSlider</span><span style="color:#a6e22e">:active</span><span style="color:#ddd">{
+    <span style="color:#ddd"><span style="color:#bf79db">background-color</span>:<span style="color:#008080"> <span style="color:#008080">rgba(<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">255</span>,<span style="color:#008080">0.5</span>)</span></span>;</span>
+<span style="color:#ddd">}</span></span>
+<span style="color:#a6e22e">[name="prev"]</span> <span style="color:#ddd">{
+    <span style="color:#ddd"><span style="color:#bf79db">margin-left</span>:<span style="color:#008080"> <span style="color:#008080">0</span><span style="color:#88f">!important</span></span>;</span>
+<span style="color:#ddd">}</span></span>
+<span style="color:#a6e22e">[name="next"]</span> <span style="color:#ddd">{
+    <span style="color:#ddd"><span style="color:#bf79db">margin-left</span>:<span style="color:#008080"> <span style="color:#008080">480</span>px<span style="color:#88f">!important</span></span>;</span>
+<span style="color:#ddd">}</span></span></pre>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
